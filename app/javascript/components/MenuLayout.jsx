@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout, Menu, Breadcrumb } from 'antd';
+import { NavLink, Link } from "react-router-dom";
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 import 'antd/dist/antd.css';
 
@@ -10,11 +11,19 @@ export default function MenuLayout({children}) {
     return (
         <Layout>
             <Header className="header">
-                <div className="logo" />
+                <Link to="/"><div className="logo" /></Link>
                 <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-                    <Menu.Item key="1">Company Overview</Menu.Item>
-                    <Menu.Item key="2">Employees</Menu.Item>
-                    <Menu.Item key="3">Upload Data</Menu.Item>
+                
+            <Menu.Item key="1"><NavLink
+                    to="/overview"
+                >Company Overview</NavLink></Menu.Item>
+
+<Menu.Item key="2"><NavLink
+                    to="/employees"
+                >Employees</NavLink></Menu.Item>
+                <Menu.Item key="3"><NavLink
+                    to="/upload"
+                >Upload Data</NavLink></Menu.Item>
                 </Menu>
             </Header>
             <Layout>
