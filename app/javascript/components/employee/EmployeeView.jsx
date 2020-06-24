@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import MenuLayout from "../MenuLayout";
+import MenuLayout from "../Layout/MenuLayout";
 
 export default () => (
   <MenuLayout>

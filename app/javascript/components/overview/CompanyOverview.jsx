@@ -1,5 +1,5 @@
 import React from "react";
-import MenuLayout from "../MenuLayout";
+import MenuLayout from "../Layout/MenuLayout";
 
 export default () => (
   <MenuLayout>
