@@ -11,7 +11,7 @@ export default function MenuLayout({children, sidebar = true}) {
     return (
         <Layout>
             <Header className="header">
-                <Link to="/"><div className="logo" /></Link>
+                <Link to="/"><div className="logo"/></Link>
                 <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
             <Menu.Item key="1"><NavLink
                     to="/overview"
@@ -30,9 +30,9 @@ export default function MenuLayout({children, sidebar = true}) {
                     {children}
                 </Sidebar>
             ) : (
-                <Content>
+                <>
                     {children}
-                </Content>
+                </>
             )}
         </Layout>
     );

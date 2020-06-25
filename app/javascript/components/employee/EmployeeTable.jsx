@@ -1,5 +1,5 @@
 import React from "react";
-import MenuLayout from "../Layout/MenuLayout";
+import MenuLayout from "../layout/MenuLayout";
 import { NavLink } from "react-router-dom";
 import { AgGridReact } from 'ag-grid-react';
 
@@ -57,12 +57,6 @@ class EmployeeTable extends React.Component {
     }
     
     componentDidMount() {
-        const {
-            match: {
-              params: { id }
-            }
-          } = this.props;
-      
         const url = `/api/v1/employees/index`;
         fetch(url)
         .then(response => {

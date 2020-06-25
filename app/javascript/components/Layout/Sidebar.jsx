@@ -1,12 +1,13 @@
 import React from "react";
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu } from 'antd';
+import NavBreadcrumbs from "./Breadcrumbs"
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 import 'antd/dist/antd.css';
 
 const { Content, Sider} = Layout;
 const { SubMenu } = Menu;
 
-export default function MenuLayout({children, sidebar}) {
+export default function Sidebar({children, sidebar}) {
     return (
         <Layout>
             <Sider width={200} className="site-layout-background">
@@ -37,11 +38,7 @@ export default function MenuLayout({children, sidebar}) {
                 </Menu>
             </Sider>
             <Layout style={{ padding: '0 24px 24px' }}>
-                <Breadcrumb style={{ margin: '16px 0' }}>
-                <Breadcrumb.Item>Home</Breadcrumb.Item>
-                <Breadcrumb.Item>List</Breadcrumb.Item>
-                <Breadcrumb.Item>App</Breadcrumb.Item>
-                </Breadcrumb>
+                <NavBreadcrumbs />
                 <Content>
                     {children}
                 </Content>

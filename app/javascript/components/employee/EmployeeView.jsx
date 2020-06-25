@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from 'antd';
 import { NavLink } from "react-router-dom";
-import MenuLayout from "../Layout/MenuLayout";
+import MenuLayout from "../layout/MenuLayout";
 
 function EmployeeDetails({employee}) {
     const {
