@@ -1,7 +1,7 @@
 class Api::V1::EmployeesController < ApplicationController
   def index
     employees = Employee.all
-    render json: employees
+    render json: employees.as_json(include: :report)
   end
 
   def create
@@ -10,7 +10,7 @@ class Api::V1::EmployeesController < ApplicationController
   def show
     employee = Employee.find(params[:id])
     if employee
-      render json: employee
+      render json: employee.as_json(include: :report)
     else
       render json: "Employee not found"
     end

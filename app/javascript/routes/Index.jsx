@@ -12,7 +12,7 @@ export default (
             <Route path="/" exact component={Home} />
             <Route path="/overview" exact component={CompanyOverview} />
             <Route path="/employees" exact component={EmployeeTable} />
-            <Route path="/employee" exact component={EmployeeView} />
+            <Route path="/employee/:id" component={EmployeeView} />
             <Route path="/upload" exact component={UploadDataPage} />
         </Switch>
     </Router>

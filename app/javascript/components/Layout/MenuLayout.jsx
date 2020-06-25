@@ -7,7 +7,7 @@ import 'antd/dist/antd.css';
 
 const { Header, Content } = Layout;
 
-export default function MenuLayout({children, sidebar}) {
+export default function MenuLayout({children, sidebar = true}) {
     return (
         <Layout>
             <Header className="header">
