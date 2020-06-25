@@ -101,6 +101,18 @@ class EmployeeView extends React.Component {
                                 </Col>
                             </Row>
                             <Row gutter={[16, 30]}>
+                                <Col span={12}><b>Subordinates</b></Col>
+                                <Col span={12}>
+                                    {
+                                        employee.subordinates ? (
+                                            employee.subordinates.map((sub) => (
+                                                <NavLink to={`/employee/${sub.id}`}>{sub.full_name} </NavLink>
+                                            ))
+                                        ) : "No subordinates"
+                                    }
+                                </Col>
+                            </Row>
+                            <Row gutter={[16, 30]}>
                                 <Col span={12}><b>Location</b></Col>
                                 <Col span={12}>{employee.location}</Col>
                             </Row>

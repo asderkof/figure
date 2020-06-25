@@ -10,7 +10,7 @@ class Api::V1::EmployeesController < ApplicationController
   def show
     employee = Employee.find(params[:id])
     if employee
-      render json: employee.as_json(include: :report)
+      render json: employee.as_json(include: [:report, :subordinates])
     else
       render json: "Employee not found"
     end
